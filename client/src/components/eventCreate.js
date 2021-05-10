@@ -24,10 +24,20 @@ export default class EventCreate extends Component {
             window.location.href = "/showevents"
         })
     }
+    showEvents={
+        marginTop :"10px"
+    }
+        mystyle = {
+            marginTop: "80px",
+            textAlign : "center",
+            width: "30%",
+            marginLeft : "35%",
+            fontWeight : "bold"
+        };
 
     render() {
         return (
-            <form>
+            <form style={this.mystyle}>
                 <h3>Create Event</h3>
 
                 <div className="form-group">
@@ -52,7 +62,7 @@ export default class EventCreate extends Component {
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block" onClick={this.handleSubmit}>Submit</button>
 
-                <a href="/showevents" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Show Events</a>
+                <a style={this.showEvents} href="/showevents" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Show Events</a>
             </form>
         );
     }

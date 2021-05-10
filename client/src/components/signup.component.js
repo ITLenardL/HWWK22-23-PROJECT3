@@ -22,9 +22,16 @@ export default class SignUp extends Component {
         }
         Api.signUp(userData).then()
     }
+        mystyle = {
+            marginTop: "80px",
+            textAlign : "center",
+            width: "30%",
+            marginLeft : "35%",
+            fontWeight : "bold"
+        };
     render() {
         return (
-            <form>
+            <form style={this.mystyle}>
                 <h3>Register</h3>
 
                 <div className="form-group">

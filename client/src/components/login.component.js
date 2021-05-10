@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
 
 
 export default class Login extends Component {
@@ -19,18 +21,24 @@ export default class Login extends Component {
         this.props.handleLogin(userData.username, userData.password)
 
     }
+        mystyle = {
+            marginTop: "80px",
+            textAlign : "center",
+            width: "30%",
+            fontWeight : "bold",
+            marginLeft : "35%"
+        };
     render() {
         return (
-            <form  >
+            <form style={this.mystyle} >
 
                 <h3>Log in</h3>
-
-                <div className="form-group">
+                <div className="form-group mt-4">
                     <label>Username</label>
                     <input type="username" className="form-control" placeholder="Enter username" name="username" value={this.state.email} onChange={this.handleInputChange} />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" >
                     <label>Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" name="password" value={this.state.password} onChange={this.handleInputChange} />
                 </div>
