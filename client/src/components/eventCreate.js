@@ -15,17 +15,17 @@ export default class EventCreate extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         const eventData = {
-            eventName: "",
-            eventStartTime: "",
-            eventEndTime: "",
-            eventDate: ""
+            eventName: this.state.eventName,
+            eventStartTime: this.state.eventStartTime,
+            eventEndTime: this.state.eventEndTime,
+            eventDate: this.state.eventDate
         }
         Api.eventCreate(eventData).then(res => {
             window.location.href = "/showevents"
         })
     }
     showEvents={
-        marginTop :"10px"
+        marginTop :"60px"
     }
         mystyle = {
             marginTop: "80px",
@@ -42,7 +42,7 @@ export default class EventCreate extends Component {
 
                 <div className="form-group">
                     <label>Event date</label>
-                    <input type="text" className="form-control" placeholder="Event date" name="eventName" value={this.state.eventDate} onChange={this.handleInputChange} />
+                    <input type="text" className="form-control" placeholder="Event date" name="eventDate" value={this.state.eventDate} onChange={this.handleInputChange} />
                 </div>
 
                 <div className="form-group">

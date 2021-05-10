@@ -7,32 +7,35 @@ const profileImage = ("./assets/profile.png");
 const cardImagesArr = ["./assets/nba1.png", "./assets/nba2.png", "./assets/nba3.png", "./assets/nba4.png", "./assets/nba5.png", "./assets/nba6.png"];
 
 const getCardImage = () =>
-  cardImagesArr[Math.floor(Math.random() * cardImagesArr.length)];
+cardImagesArr[Math.floor(Math.random() * cardImagesArr.length)];
 
+var mystyle = {
+    marginTop: "80px",
+    textAlign : "center",
+    width: "30%",
+    fontWeight : "bold",
+    marginLeft : "35%"
+};
 
 export function EventCardRender(props) {
-
   const [Event, setEvent] = useState([])
   useEffect(() => {
     Api.getAllEvents().then(res => {
       setEvent(res.data)
     })
   }, [])
-
+  console.log(Event)
   return (
     <>
-      {
-        Event.map(event => {
+      {Event.map(event => {
           return (
             <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" src={getCardImage()} />
-              <Card.Header>{event.eventname}</Card.Header>
               <Card.Body>
-                <Card.Title>{event.eventDate} </Card.Title>
                 <Card.Text>
-                  <p>{event.eventStartTime}</p>
-                  <br></br>
-                  <p>{event.eventEndTime}</p>
+                {event.eventname}<br></br>
+                {event.eventDate}
+                  <p>starts : {event.eventStartTime}  - {event.eventEndTime}</p>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -41,7 +44,7 @@ export function EventCardRender(props) {
       }
     </>
   )
-
+  
 }
 
 
@@ -52,17 +55,7 @@ export function ProfileCardRender(props) {
       setUser(res.data)
     })
   }, [])
-
-
-mystyle = {
-    marginTop: "80px",
-    textAlign : "center",
-    width: "30%",
-    fontWeight : "bold",
-    marginLeft : "35%"
-};
-
-
+  
   return (
     <>
       {User.map(user => {
@@ -70,7 +63,7 @@ mystyle = {
           <Card style={{ width: '22rem' }}>
             <Card.Img variant="top" src={profileImage} />
             <Card.Body>
-              <form style={this.mystyle} >
+              <form style={mystyle} >
                 <div class="input-group">
                   <div class="input-group-text">Name: {user.name}</div>
                   <input type="text" class="form-control" id="inlineFormInputGroupUsername">
@@ -111,13 +104,9 @@ mystyle = {
               </form>
             </Card.Body>
           </Card>
-
-
         )
       })
       }
-
     </>
   )
-
 }
