@@ -54,6 +54,14 @@ export function ProfileCardRender(props) {
   }, [])
 
 
+mystyle = {
+    marginTop: "80px",
+    textAlign : "center",
+    width: "30%",
+    fontWeight : "bold",
+    marginLeft : "35%"
+};
+
 
   return (
     <>
@@ -62,7 +70,7 @@ export function ProfileCardRender(props) {
           <Card style={{ width: '22rem' }}>
             <Card.Img variant="top" src={profileImage} />
             <Card.Body>
-              <form>
+              <form style={this.mystyle} >
                 <div class="input-group">
                   <div class="input-group-text">Name: {user.name}</div>
                   <input type="text" class="form-control" id="inlineFormInputGroupUsername">
