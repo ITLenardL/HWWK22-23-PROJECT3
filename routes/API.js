@@ -55,13 +55,13 @@ router.post('/api/register', function (req, res) {
 router.post('/api/login',
   passport.authenticate('local'),
   function (req, res) {
-    console.log("user",req.user)
+    console.log("user", req.user)
     res.json(req.user)
   }
 );
 
 router.get("/api/allusers", function (req, res) {
-  User.find().then(function(results){
+  User.find().then(function (results) {
     res.json(results)
   })
 })
@@ -96,7 +96,7 @@ router.post('/api/newEvent', function (req, res) {
 
 // Endpoint to get current event
 router.get("/api/allevents", function (req, res) {
-  Event.find().then(function(results){
+  Event.find().then(function (results) {
     res.json(results)
   })
 })
