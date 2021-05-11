@@ -41,7 +41,7 @@ export default class SignUp extends Component {
 
                 <div className="form-group">
                     <label>Username</label>
-                    <input type="username" className="form-control" placeholder="Full name" name="username" value={this.state.username} onChange={this.handleInputChange} />
+                    <input type="username" className="form-control" placeholder="Username" name="username" value={this.state.username} onChange={this.handleInputChange} />
                 </div>
 
                 <div className="form-group">
