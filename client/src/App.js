@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     Api.getUser().then((user) => {
       if(user) {
-        setIsLoggedIn(false);
+        setIsLoggedIn(true);
       }
       setIsLoading(false);
     })
