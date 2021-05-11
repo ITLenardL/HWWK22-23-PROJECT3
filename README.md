@@ -27,8 +27,7 @@ https://github.com/ITLenardL/HWWK22-23-PROJECT3
 
 ### Screenshots
 
-[ss1](https://i.imgur.com/fEGBkw4.png)
-[ss2](https://i.imgur.com/5Mn1EsI.png)
-
+[Imgur](https://imgur.com/B5my5jm)
+[Imgur](https://imgur.com/undefined)
 
 
