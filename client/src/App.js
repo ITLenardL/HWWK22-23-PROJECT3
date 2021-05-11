@@ -14,7 +14,6 @@ import Api from "./utils/api";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-
   
   const handleLogin = (username, password) => {
     Api.signIn({ username, password }).then(res => {

@@ -20,7 +20,9 @@ export default class SignUp extends Component {
             name: this.state.name,
             email: this.state.email
         }
-        Api.signUp(userData).then()
+        Api.signUp(userData).then(res => {
+            window.location.href = "/"
+        })
     }
         mystyle = {
             marginTop: "80px",

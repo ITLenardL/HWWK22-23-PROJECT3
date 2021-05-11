@@ -33,10 +33,10 @@ export function EventCardRender(props) {
               <Card.Img variant="top" src={getCardImage()} />
               <Card.Body>
                 <Card.Text>
-                {event.eventname}<br></br>
-                {event.eventDate}
+                <p>{event.eventName} on {event.eventDate}</p>
                   <p>starts : {event.eventStartTime}  - {event.eventEndTime}</p>
                 </Card.Text>
+                <button type="attending" class="btn btn-primary">attending</button>
               </Card.Body>
             </Card>
           )

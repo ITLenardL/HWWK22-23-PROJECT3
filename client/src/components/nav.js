@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
-
 function Nav({ isLoggedIn, handleLogout }) {
 
     return (
-        <div fluid>
+        <div fluid="true">
             <nav className="navbar navbar-expand-lg navbar-light fixed-top">
                 <div className="container">
                     <ul className="navbar-nav ml-auto">

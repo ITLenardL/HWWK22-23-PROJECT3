@@ -1,5 +1,4 @@
 import axios from "axios"
-
 export default {
     getAllUsers(){
         return axios.get("/api/allUsers")
@@ -22,4 +21,4 @@ export default {
     eventCreate(eventData){
         return axios.post("api/newEvent", eventData)
     }
-}
+};
