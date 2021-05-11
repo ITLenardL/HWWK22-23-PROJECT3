@@ -1,7 +1,22 @@
 import React, { Component } from "react";
 import Api from "../utils/api";
+import { Redirect } from "react-router-dom"
+
 
 export default class EventCreate extends Component {
+    state = {
+        redirect: false
+    }
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    }
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/showevents' />
+        }
+    }
     state = {
         eventName: "",
         eventStartTime: "",
@@ -21,19 +36,19 @@ export default class EventCreate extends Component {
             eventDate: this.state.eventDate
         }
         Api.eventCreate(eventData).then(res => {
-            window.location.href = "/showevents"
+            this.setRedirect();
         })
     }
-    showEvents={
-        marginTop :"60px"
+    showEvents = {
+        marginTop: "60px"
     }
-        mystyle = {
-            marginTop: "80px",
-            textAlign : "center",
-            width: "30%",
-            marginLeft : "35%",
-            fontWeight : "bold"
-        };
+    mystyle = {
+        marginTop: "80px",
+        textAlign: "center",
+        width: "30%",
+        marginLeft: "35%",
+        fontWeight: "bold"
+    };
 
     render() {
         return (
@@ -61,8 +76,8 @@ export default class EventCreate extends Component {
                 </div>
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block" onClick={this.handleSubmit}>Submit</button>
-
-                <a style={this.showEvents} href="/showevents" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Show Events</a>
+                {this.renderRedirect()}
+                <button style={this.showEvents} className="btn btn-secondary btn-lg active" onClick={this.setRedirect}>Show Events</button>
             </form>
         );
     }

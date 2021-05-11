@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -13,12 +13,23 @@ import Api from "./utils/api";
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    Api.getUser().then((user) => {
+      if(user) {
+        setIsLoggedIn(false);
+      }
+      setIsLoading(false);
+    })
+  }, []);
+
   const handleLogin = (username, password) => {
     Api.signIn({ username, password }).then(res => {
       console.log(res)
-      setIsLoggedIn(true)
+      setIsLoggedIn(true);
+      setIsLoading(false);
     })
   }
   const handleLogout = () => {
@@ -26,6 +37,10 @@ function App() {
     Api.signOut().then(
       setIsLoggedIn(false)
     )
+  }
+
+  if(isLoading) {
+    return null;
   }
 
   return (<Router>

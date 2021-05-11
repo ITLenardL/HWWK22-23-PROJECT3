@@ -36,7 +36,7 @@ export function EventCardRender(props) {
                 <p>{event.eventName} on {event.eventDate}</p>
                   <p>starts : {event.eventStartTime}  - {event.eventEndTime}</p>
                 </Card.Text>
-                <button type="attending" class="btn btn-primary">attending</button>
+                <button type="attending" className="btn btn-primary">attending</button>
               </Card.Body>
             </Card>
           )
@@ -64,43 +64,43 @@ export function ProfileCardRender(props) {
             <Card.Img variant="top" src={profileImage} />
             <Card.Body>
               <form style={mystyle} >
-                <div class="input-group">
-                  <div class="input-group-text">Name: {user.name}</div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                <div className="input-group">
+                  <div className="input-group-text">Name: {user.name}</div>
+                  <input type="text" className="form-control" id="inlineFormInputGroupUsername">
                   </input>
                 </div>
 
-                <div class="input-group">
-                  <div class="input-group-text">Username: {user.username}</div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                <div className="input-group">
+                  <div className="input-group-text">Username: {user.username}</div>
+                  <input type="text" className="form-control" id="inlineFormInputGroupUsername">
                   </input>
                 </div>
 
-                <div class="input-group">
-                  <div class="input-group-text">Email: {user.email}</div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                <div className="input-group">
+                  <div className="input-group-text">Email: {user.email}</div>
+                  <input type="text" className="form-control" id="inlineFormInputGroupUsername">
                   </input>
                 </div>
 
-                <div class="input-group">
-                  <div class="input-group-text">Password</div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                <div className="input-group">
+                  <div className="input-group-text">Password</div>
+                  <input type="text" className="form-control" id="inlineFormInputGroupUsername">
                   </input>
                 </div>
 
-                <div class="input-group">
-                  <div class="input-group-text">MemberType: {user.memberType}</div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                <div className="input-group">
+                  <div className="input-group-text">MemberType: {user.memberType}</div>
+                  <input type="text" className="form-control" id="inlineFormInputGroupUsername">
                   </input>
                 </div>
 
-                <div class="input-group">
-                  <div class="input-group-text">GamesOwing: {user.gamesOwing}</div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+                <div className="input-group">
+                  <div className="input-group-text">GamesOwing: {user.gamesOwing}</div>
+                  <input type="text" className="form-control" id="inlineFormInputGroupUsername">
                   </input>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Submit</button>
               </form>
             </Card.Body>
           </Card>

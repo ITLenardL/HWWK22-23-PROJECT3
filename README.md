@@ -57,3 +57,51 @@ You are required to submit the following:
 - The URL of the deployed application
 
 - The URL of the GitHub repository
+
+
+--------------------------------------------------------
+
+# Final Project
+I have named my final project: Lenny's basketball bookings: it is an app that we must have created solo with assistance, using our knowledge of the MERN stack.
+
+## Description
+The inspiration for the project: I organise basketball runs with friends and others, due to covid people need to be tracked in the event of infection, numbers need to be tracked for how many spaces available for players, players need to be tracked for who owes money. With these things in mind, I wanted to build an app that could have a user register and login, they will have a notice page of the rules/payment details, they can then book their own event or register their attendance to a current created event. An admin user can alter user details and update who owes money for games depending on attendance and payment received.
+
+## Design
+Using the MERN stack learnt over these 6 months.
+
+## Technology
+* Mongodb
+* JavaScript
+* Bootstrap
+* Express
+* React
+* Git
+* JSX
+* NodeJS
+* Heroku
+* Mongo Atlas
+
+### URL
+https://fast-reef-93180.herokuapp.com/
+
+### GitHub Repository
+https://github.com/ITLenardL/HWWK22-23-PROJECT3
+
+### Screenshots
+Large Screen View- Home Page
+
+![port2](https://user-images.githubusercontent.com/73642462/111426356-aaed3700-8748-11eb-96a3-3acb5bfe1d3d.PNG)
+
+Medium Screen View- Home Page featuring skillset tech icons
+
+![port-md-new](https://user-images.githubusercontent.com/73642462/114956249-d1b2a080-9ea1-11eb-8fb6-7bd3cbc5152d.PNG)
+
+Small Screen View- Project Page
+
+![port6](https://user-images.githubusercontent.com/73642462/111426459-c9ebc900-8748-11eb-9544-b2b729aa6141.PNG)
+
+
+Portfolio Page Modal
+
+![port-modal](https://user-images.githubusercontent.com/73642462/111426453-c8ba9c00-8748-11eb-8d27-a8d54ae2aa2e.PNG)
